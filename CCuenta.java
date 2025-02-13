@@ -71,11 +71,11 @@ public class CCuenta {
    }  
    public void retirar(double cantidad) 
    {try {  
-   System.out.println("Retiro en cuenta: " + cantidad);
+   System.out.println("Quitamos en cuenta: " + cantidad);
    if (cantidad <= 0) 
    throw new Exception ("No se puede retirar una cantidad negativa");       
    if (estado()< cantidad)   
-   throw new Exception ("No se hay suficiente saldo");     
+   throw new Exception ("No hay suficiente dinero");     
             setSaldo(getSaldo() - cantidad);     
    } catch (Exception e) {       
    System.out.println(e);
@@ -83,7 +83,7 @@ public class CCuenta {
    }   
    public void ingresar(double cantidad)  
    {try {      
-   System.out.println("Ingreso en cuenta: " + cantidad);
+   System.out.println("Aumento en cuenta: " + cantidad);
    if (cantidad<0)  
    throw new Exception("No se puede ingresar una cantidad negativa");     
             setSaldo(getSaldo() + cantidad); 
@@ -94,7 +94,7 @@ public class CCuenta {
    public static void main(String[] args) {  
    CCuenta cuenta1;
    double saldoActual;   
-   cuenta1 = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0); 
+   cuenta1 = new CCuenta("Luis Hernández","1000-2365-85-1230456745",4000,0); 
    saldoActual = cuenta1.estado();
    System.out.println("El saldo actual es "+ saldoActual );
 
